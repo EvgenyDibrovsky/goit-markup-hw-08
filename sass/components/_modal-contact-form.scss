@@ -83,7 +83,7 @@
 
 .checkbox-policy-label {
     @extend %align;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: $secondary-font-color;
@@ -118,4 +118,13 @@
 .checkbox-policy-link {
     text-decoration-line: underline; 
     color: $accent-color;
+}
+
+@media screen and (min-width:1200px) {
+    .checkbox-policy-label {
+        font-size: 14px;
+        line-height: 1.7;
+        letter-spacing: 0.03em;
+    }
+
 }

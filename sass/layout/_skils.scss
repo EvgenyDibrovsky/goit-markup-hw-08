@@ -1,3 +1,4 @@
+
 .skills {
     display: flex;
     flex-wrap: wrap;
@@ -29,4 +30,12 @@
     text-transform: uppercase;
     color: $font-color-white;
 }
+
+.skills__img {
+    width: 370px;
+    height: 294px;
+}
+
+
+
 

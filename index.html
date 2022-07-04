@@ -29,6 +29,11 @@
                     </li>
                 </ul>
             </nav>
+            <button type="button" class="mobile-menu-open-btn" data-menu-open>
+                <svg class="mobile-menu-open-btn__icon" width="40" height="40">
+                    <use href="./images/icons.svg#burger-icon" ></use>
+                </svg>
+            </button>
             <ul class="contacts">
                 <li class="contacts__item">
                     <a class="contacts__link" href="mailto:info@devstudio.com">
@@ -48,6 +53,57 @@
                 </li>
             </ul>
         </div>
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon" width="40" height="40">
+                        <use href="./images/icons.svg#menu-close-icon"></use>
+                    </svg>
+                </button>
+
+                <ul class="mobile-nav">
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link mobile-nav__link--current" href="./index.html">Студия</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mobile-nav__item">
+                        <a class="mobile-nav__link" href="#">Контакты</a>
+                    </li>
+                </ul>
+        
+                <ul class="mobile-contacts">
+                    <li class="mobile-contacts__item">
+                        <a class="mobile-contacts__tel" href="tel:+380961111111">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                    <li class="mobile-contacts__item">
+                        <a class="mobile-contacts__email" href="mailto:info@devstudio.com">
+                            info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+        
+                <ul class="mobile-social">
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link" href="">Instagram</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link"  href="">Twitter</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link"  href="">Facebook</a>
+                    </li>
+                    <li class="mobile-social__item">
+                        <a class="mobile-social__link"  href="">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
     <!-- MAIN -->
@@ -56,7 +112,7 @@
         <!-- HERO -->
         <section class="hero section--bg-dark overlay">
             <div class="container">
-                <div class="hero">
+                <div class="hero__wrapper">
                     <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
                     <button class="hero__btn" type="button" data-modal-open>
                         Заказать услугу
@@ -111,21 +167,48 @@
         </section>
 
         <!-- SKILLS -->
-        <section class="section section--no-padding-top">
+        <section class="section section--no-padding-top section--section-hiden">
             <div class="container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <ul class="skills">
                     <li class="skills__item">
-                        <img src="./images/skills/programming.jpg" alt="Программирование" width="370" height="294">
-                            <p class="skills__description">Десктопные приложения</p>
+                        <picture>
+                            <source
+                            srcset="./images/desktop/skills/webp/desktop-programming.webp 1x, ./images/desktop/skills/webp/desktop-programming@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/skills/jpg/desktop-programming.jpg 1x, ./images/desktop/skills/jpg/desktop-programming@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <img src="./images/desktop/skills/jpg/desktop-programming.jpg" alt="Десктопные приложения" class="skills__img">
+                        </picture>
+                        <p class="skills__description">Десктопные приложения</p>
                     </li>
                     <li class="skills__item">
-                        <img src="./images/skills/adaptive.jpg" alt="Адаптивная верстка" width="370" height="294">
-                            <p class="skills__description">Мобильные приложения</p>
+                        <picture>
+                            <source
+                            srcset="./images/desktop/skills/webp/desktop-adaptive.webp 1x, ./images/desktop/skills/webp/desktop-adaptive@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/skills/jpg/desktop-adaptive.jpg 1x, ./images/desktop/skills/jpg/desktop-adaptive@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <img src="./images/desktop/skills/jpg/desktop-adaptive.jpg" alt="Мобильные приложения" class="skills__img">
+                        </picture>
+                        <p class="skills__description">Мобильные приложения</p>
                     </li>
                     <li class="skills__item">
-                        <img src="./images/skills/design.jpg" alt="Веб-дизайн" width="370" height="294">
-                            <p class="skills__description">Дизайнерские решения</p>
+                        <picture>
+                            <source
+                            srcset="./images/desktop/skills/webp/desktop-design.webp 1x, ./images/desktop/skills/webp/desktop-design@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/skills/jpg/desktop-design.jpg 1x, ./images/desktop/skills/jpg/desktop-design@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <img src="./images/desktop/skills/jpg/desktop-design.jpg" alt="Дизайнерские решения" class="skills__img">
+                        </picture>
+                        <p class="skills__description">Дизайнерские решения</p>
                     </li>
                 </ul>
             </div>
@@ -137,7 +220,33 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team">
                     <li class="team__item">
-                        <img src="./images/team/igor-demyanenko.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                        <picture>
+                            <source
+                            srcset="./images/desktop/team/webp/desktop-igor-demyanenko.webp 1x, ./images/desktop/team/webp/desktop-igor-demyanenko@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/team/jpg/desktop-igor-demyanenko.jpg 1x, ./images/desktop/team/jpg/desktop-igor-demyanenko@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+
+                            <source
+                            srcset="./images/tablet/team/webp/tablet-igor-demyanenko.webp 1x, ./images/tablet/team/webp/tablet-igor-demyanenko@2x.webp 2x"
+                            media="(min-width: 768px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/tablet/team/jpg/tablet-igor-demyanenko.jpg 1x, ./images/tablet/team/jpg/tablet-igor-demyanenko@2x.jpg 2x"
+                            media="(min-width: 768px)">
+
+                            <source
+                            srcset="./images/mobile/team/webp/mobile-igor-demyanenko.webp 1x, ./images/mobile/team/webp/mobile-igor-demyanenko@2x.webp 2x"
+                            media="(max-width: 767px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/mobile/team/jpg/mobile-igor-demyanenko.jpg 1x, ./images/mobile/team/jpg/mobile-igor-demyanenko@2x.jpg 2x"
+                            media="(max-width: 767px)">
+
+                            <img src="./images/mobile/team/jpg/mobile-igor-demyanenko.jpg" alt="Игорь Демьяненко" class="team__img">
+                        </picture>
                         <div class="team__wrapper">
                             <h3 class="team__title">Игорь Демьяненко</h3>
                             <p class="team__text" lang="en">Product Designer</p>
@@ -174,7 +283,33 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/olga-repina.jpg" alt="Ольга Репина" width="270" height="260">
+                        <picture>
+                            <source
+                            srcset="./images/desktop/team/webp/desktop-olga-repina.webp 1x, ./images/desktop/team/webp/desktop-olga-repina@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/team/jpg/desktop-olga-repina.jpg 1x, ./images/desktop/team/jpg/desktop-olga-repina@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+
+                            <source
+                            srcset="./images/tablet/team/webp/tablet-olga-repina.webp 1x, ./images/tablet/team/webp/tablet-olga-repina@2x.webp 2x"
+                            media="(min-width: 768px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/tablet/team/jpg/tablet-olga-repina.jpg 1x, ./images/tablet/team/jpg/tablet-olga-repina@2x.jpg 2x"
+                            media="(min-width: 768px)">
+
+                            <source
+                            srcset="./images/mobile/team/webp/mobile-olga-repina.webp 1x, ./images/mobile/team/webp/mobile-olga-repina@2x.webp 2x"
+                            media="(max-width: 767px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/mobile/team/jpg/mobile-olga-repina.jpg 1x, ./images/mobile/team/jpg/mobile-olga-repina@2x.jpg 2x"
+                            media="(max-width: 767px)">
+
+                            <img src="./images/mobile/team/jpg/mobile-olga-repina.jpg" alt="Ольга Репина" class="team__img">
+                        </picture>
                         <div class="team__wrapper">
                             <h3 class="team__title">Ольга Репина</h3>
                             <p class="team__text" lang="en">Frontend Developer</p>
@@ -211,7 +346,33 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/nikolai-tarasov.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <picture>
+                            <source
+                            srcset="./images/desktop/team/webp/desktop-nikolai-tarasov.webp 1x, ./images/desktop/team/webp/desktop-nikolai-tarasov@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/team/jpg/desktop-nikolai-tarasov.jpg 1x, ./images/desktop/team/jpg/desktop-nikolai-tarasov@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+
+                            <source
+                            srcset="./images/tablet/team/webp/tablet-nikolai-tarasov.webp 1x, ./images/tablet/team/webp/tablet-nikolai-tarasov@2x.webp 2x"
+                            media="(min-width: 768px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/tablet/team/jpg/tablet-nikolai-tarasov.jpg 1x, ./images/tablet/team/jpg/tablet-nikolai-tarasov@2x.jpg 2x"
+                            media="(min-width: 768px)">
+
+                            <source
+                            srcset="./images/mobile/team/webp/mobile-nikolai-tarasov.webp 1x, ./images/mobile/team/webp/mobile-nikolai-tarasov@2x.webp 2x"
+                            media="(max-width: 767px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/mobile/team/jpg/mobile-nikolai-tarasov.jpg 1x, ./images/mobile/team/jpg/mobile-nikolai-tarasov@2x.jpg 2x"
+                            media="(max-width: 767px)">
+
+                            <img src="./images/mobile/team/jpg/mobile-nikolai-tarasov.jpg" alt="Николай Тарасов" class="team__img">
+                        </picture>
                         <div class="team__wrapper">
                             <h3 class="team__title">Николай Тарасов</h3>
                             <p class="team__text" lang="en">Marketing</p>
@@ -248,7 +409,33 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/mikhail-ermakov.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <picture>
+                            <source
+                            srcset="./images/desktop/team/webp/desktop-mikhail-ermakov.webp 1x, ./images/desktop/team/webp/desktop-mikhail-ermakov@2x.webp 2x"
+                            media="(min-width: 1200px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/desktop/team/jpg/desktop-mikhail-ermakov.jpg 1x, ./images/desktop/team/jpg/desktop-mikhail-ermakov@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+
+                            <source
+                            srcset="./images/tablet/team/webp/tablet-mikhail-ermakov.webp 1x, ./images/tablet/team/webp/tablet-mikhail-ermakov@2x.webp 2x"
+                            media="(min-width: 768px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/tablet/team/jpg/tablet-mikhail-ermakov.jpg 1x, ./images/tablet/team/jpg/tablet-mikhail-ermakov@2x.jpg 2x"
+                            media="(min-width: 768px)">
+
+                            <source
+                            srcset="./images/mobile/team/webp/mobile-mikhail-ermakov.webp 1x, ./images/mobile/team/webp/mobile-mikhail-ermakov@2x.webp 2x"
+                            media="(max-width: 767px)"
+                            type="image/webp">
+                            <source
+                            srcset="./images/mobile/team/jpg/mobile-mikhail-ermakov.jpg 1x, ./images/mobile/team/jpg/mobile-mikhail-ermakov@2x.jpg 2x"
+                            media="(max-width: 767px)">
+
+                            <img src="./images/mobile/team/jpg/mobile-mikhail-ermakov.jpg" alt="Михаил Ермаков" class="team__img">
+                        </picture>
                         <div class="team__wrapper">
                             <h3 class="team__title">Михаил Ермаков</h3>
                             <p class="team__text" lang="en">UI Designer</p>
@@ -345,8 +532,9 @@
     <!-- FOOTER -->
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-box">
             <div class="footer-row">
+                
                 <!--WIDGET CONTACTS -->
                 <div class="widgent-contacts">        
                     <a class="logo" href="./index.html" lang="en">Web<span class="logo__light">Studio</span></a>             
@@ -398,75 +586,76 @@
                         </li>
                     </ul>
                 </div>
-                 <!-- WIDGET  SUBSCRIBE -->
-                 <div class="widget-subscribe">
-                    <h3 class="footer-title">Подпишитесь на рассылку</h3>
-                    
-                    <form class="form-subscribe">
-                        <label for="user-email"></label>
-                        <input class="form-subscribe__input" type="email" id="user-email" placeholder="E-mail">
-                        <button class="subscribe-btn" type="submit">Подписаться
-                            <svg class="subscribe-btn__icon">
-                                <use href="./images/icons.svg#send-icon"></use>
-                            </svg>
-                        </button>
-                    </form>
-
-                 </div>
-                 
             </div>
+                 <!-- WIDGET  SUBSCRIBE -->
+            <div class="widget-subscribe">
+            <h3 class="footer-title">Подпишитесь на рассылку</h3>
+                <form class="form-subscribe">
+                    <label for="user-email-subscribe"></label>
+                    <input class="form-subscribe__input" type="email" id="user-email-subscribe" placeholder="E-mail">
+                    <button class="subscribe-btn" type="submit">Подписаться
+                        <svg class="subscribe-btn__icon">
+                            <use href="./images/icons.svg#send-icon"></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
         </div>
     </footer>
 
-<div class="backdrop is-hidden" data-modal> 
-    <div class="modal">
-        <button type="button" class="modal-close-btn" data-modal-close>
-            <svg class="modal-close-btn-icon" width="18" height="18">
-                <use href="./images/icons.svg#close-icon"></use>
-            </svg>
-        </button>
-
-        <form class="modal-form">
-            
-            <p class="modal-form__text-action">Оставьте свои данные, мы вам перезвоним</p>
-            
-            <label class="modal-form__label" for="user-name">Имя</label>
-            <span class="modal-form__input-wrapper">
-                <input class="modal-form__input" type="text" id="user-name" name="user-name" pattern="[a-zA-Z]*" title="Evgeniy">
-                <svg class="modal-form__icon">
-                    <use href="./images/icons.svg#user-icon"></use>
+    <div class="backdrop is-hidden" data-modal> 
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>
+                <svg class="modal-close-btn-icon" width="18" height="18">
+                    <use href="./images/icons.svg#close-icon"></use>
                 </svg>
-            </span>
+            </button>
 
-            <label class="modal-form__label" for="user-tel">Телефон</label>
-            <span class="modal-form__input-wrapper">
-                <input class="modal-form__input" type="tel" id="user-tel" name="user-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" >
-                <svg class="modal-form__icon">
-                    <use href="./images/icons.svg#tel-icon"></use>
-                </svg>
-            </span>
+            <form class="modal-form">
+                
+                <p class="modal-form__text-action">Оставьте свои данные, мы вам перезвоним</p>
+                
+                <label class="modal-form__label" for="user-name">Имя</label>
+                <span class="modal-form__input-wrapper">
+                    <input class="modal-form__input" type="text" id="user-name" name="user-name" pattern="[a-zA-Z]*" title="Evgeniy">
+                    <svg class="modal-form__icon">
+                        <use href="./images/icons.svg#user-icon"></use>
+                    </svg>
+                </span>
+
+                <label class="modal-form__label" for="user-tel">Телефон</label>
+                <span class="modal-form__input-wrapper">
+                    <input class="modal-form__input" type="tel" id="user-tel" name="user-tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" title="xxx-xxx-xx-xx" >
+                    <svg class="modal-form__icon">
+                        <use href="./images/icons.svg#tel-icon"></use>
+                    </svg>
+                </span>
+                
+                <label class="modal-form__label" for="user-email">Почта</label>
+                <span class="modal-form__input-wrapper">
+                    <input class="modal-form__input" type="email" id="user-email" name="user-email">
+                    <svg class="modal-form__icon">
+                        <use href="./images/icons.svg#email-icon"></use>
+                    </svg>
+                </span>
+
+                <label class="modal-form__label" for="user-message">Коментарий</label>
+                <textarea class="modal-form__message" id="user-message" name="user-message" placeholder="Введите текст"></textarea>
             
-            <label class="modal-form__label" for="user-email">Почта</label>
-            <span class="modal-form__input-wrapper">
-                <input class="modal-form__input" type="email" id="user-email" name="user-email">
-                <svg class="modal-form__icon">
-                    <use href="./images/icons.svg#email-icon"></use>
-                </svg>
-            </span>
+                <input class="checkbox-policy visually-hidden" type="checkbox" id="user-checkbox-policy" name="user-checkbox-policy">
+                <label class="checkbox-policy-label" for="user-checkbox-policy">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#" class="checkbox-policy-link">Условия договора</a></label>  
 
-            <label class="modal-form__label" for="user-message">Коментарий</label>
-            <textarea class="modal-form__message" id="user-message" name="user-message" placeholder="Введите текст"></textarea>
-        
-            <input class="checkbox-policy visually-hidden" type="checkbox" id="user-checkbox-policy" name="user-checkbox-policy">
-            <label class="checkbox-policy-label" for="user-checkbox-policy">Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#" class="checkbox-policy-link">Условия договора</a></label>  
+                <button class="modal-form-btn" type="submit">Отправить</button>
 
-            <button class="modal-form-btn" type="submit">Отправить</button>
+            </form>
 
-        </form>
-
+        </div>
     </div>
-</div>
 
+    <!-- mobile-menu -->
+    <script src="./js/menu.js"></script>
+    <!-- modal -->
     <script src="./js/modal.js"></script>
 </body>
 

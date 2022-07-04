@@ -1,14 +1,7 @@
-
 .footer {
     background-color: $bg-footer;
     padding-top: 60px;
     padding-bottom: 60px;
-}
-
-.footer-row {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
 }
 
 .footer .logo  {
@@ -16,10 +9,12 @@
     margin-bottom: 20px;
 }
 
-.widgent-contacts {
-    display: block;
-    flex-grow: 1;
-    margin-right: 70px;
+.address {
+    font-style: normal;
+}
+
+.footer-contacts {
+  margin-bottom: 60px;
 }
 
 .address {
@@ -47,16 +42,8 @@
 
 .contacts-link {
     color: $footer-font-white-transparent;
-
     transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
-.widget-social {
-    display: block;
-    min-width: 206px;
-    margin-right: 83px;
-} 
 
 .footer-title {
     @include font(14px, 700, 16.41px, 0.03em);
@@ -67,6 +54,7 @@
 
 .footer-social {
     display: flex;
+    justify-content: center;
 }
 
 .footer-social__item {
@@ -100,14 +88,9 @@
     height: 20px;
 }
 
-.form-subscribe {
-    @extend %align;
-}
-
 .form-subscribe__input {
-    width: 358px;
+    width: 450px;
     padding: 15px 16px;
-    margin-right: 12px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -119,5 +102,87 @@
         display: flex;
         align-items: center;
         color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .footer-contacts {
+        margin-bottom: 0;
+    }
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items:baseline;
+    }
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    .widgent-contacts {
+        margin-left: 61px;
+        margin-bottom: 60px;
+    }
+
+    .widget-social {
+        margin-right: 74px;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+
+    .footer-contacts, 
+    .footer-title  {
+        text-align: center;
+    }
+
+    .widget-subscribe, 
+    .widgent-contacts {
+        text-align: center;
+    }
+     
+    .widget-social {
+        margin-bottom: 60px;
+    }
+
+    .form-subscribe__input {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+
+    .footer-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .footer-row {
+        display: flex;
+        align-items: baseline;
+    }
+    .footer .logo {
+        @include font(26px, 700, 31px, 0.03em);
+    }
+
+    .widgent-contacts {
+        margin-right: 70px;
+    }
+
+    .form-subscribe {
+        display: flex;
+    }
+
+    .form-subscribe__input {
+        display: block;
+        width: 358px;
+        margin-right: 12px;
     }
 }

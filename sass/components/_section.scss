@@ -1,6 +1,6 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .section--bg-dark {
@@ -12,13 +12,31 @@
 }
 
 .section__title {
-    @include font(36px, 700, 42.19px, 0.03em);
+    @include font(28px, 700, 33px, 0.03em);
     text-align: center;
     color: $primary-font-color;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-.section--no-padding-top {
-    padding-top: 0;
+@media screen and (max-width: 1199px) {
+    .section--section-hiden {
+        display: none;
+    }
 }
 
+@media screen and (min-width: 1200px) {
+    
+    .section {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    .section__title {
+        @include font(36px, 700, 42.19px, 0.03em);
+        margin-bottom: 50px;
+    }
+
+    .section--no-padding-top {
+        padding-top: 0;
+    }
+}
