@@ -4,7 +4,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 450px;
+    width: 100%;
     height: 609px;
     padding: 40px 40px;
     background-color: $bg-modal;
@@ -32,6 +32,19 @@
     &:focus {
         fill: $accent-color;
     }
+}
+
+@media screen and (min-width:480px) {
+    .modal {
+        width: 450px;
+    }    
+}
+
+@media screen and (min-width:768px) {
+    .modal {
+        width: 450px;
+        height: 609px;
+    }    
 }
 
 @media screen and (min-width:1200px) {

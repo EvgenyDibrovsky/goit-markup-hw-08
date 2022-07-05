@@ -1,7 +1,13 @@
 @media screen and (max-width: 767px) {
-    .mobile-nav {
-        margin-left: 25px;
-        margin-bottom: 302px;
+
+    .mobile-menu__container {
+        position: relative;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
     }
     
     .mobile-nav__item:not(:last-child) {
@@ -25,7 +31,6 @@
     }
     
     .mobile-contacts {
-        margin-left: 25px;
         margin-bottom: 64px;
     }
     
@@ -46,7 +51,6 @@
     .mobile-social {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 25px;
     }
     
     .mobile-social__item:not(:last-child) {
@@ -88,13 +92,7 @@
             z-index: 999;
         }
     }
-    
-    .mobile-menu__container {
-        position: relative;
-        padding-top: 48px;
-        padding-bottom: 48px;
-    }
-    
+       
     .mobile-menu__close-btn {
         position: absolute;
         top: 10px;

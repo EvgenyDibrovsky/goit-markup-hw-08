@@ -22,7 +22,7 @@
 }
 
 .overlay {
-    max-width: 480px;
+    max-width: 1600px;
     height: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -35,12 +35,9 @@
 
 @media screen and (min-width:768px) {
     .overlay {
-        max-width: 768px;
         background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/tablet/hero/jpg/tablet-hero.jpg);
     }
 }
-
-
 
 @media screen and (min-width:1200px) {
     .hero {
@@ -58,8 +55,7 @@
 
     .overlay {
         height: 600px;
-        max-width: 1600px;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/desktop/hero/jpg/desktop-hero.jpg);
+         background-image: linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../images/desktop/hero/jpg/desktop-hero.jpg);
 
     }
     @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi),  (min-resolution: 2dppx) {
