@@ -1333,4 +1333,15 @@ a {
     width: 358px;
     margin-right: 12px;
   }
+}
+.contacts-form {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+  }
 }/*# sourceMappingURL=main.css.map */
