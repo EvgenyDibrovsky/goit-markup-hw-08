@@ -736,7 +736,7 @@ a {
   .menu {
     display: none;
   }
-  menu__item .contacts {
+  .contacts {
     display: none;
   }
   .header__container {
